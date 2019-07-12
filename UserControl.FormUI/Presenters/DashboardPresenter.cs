@@ -41,7 +41,6 @@ namespace UserControl.FormUI.Presenters
         private List<User> users;
 
         private User currentUser;
-        private FileStream fileStream;
         private readonly BinaryFormatter binaryFormatter;
 
         #endregion
@@ -168,9 +167,10 @@ namespace UserControl.FormUI.Presenters
 
         private void Serialize()
         {
-            fileStream = new FileStream("data.dat", FileMode.Create, FileAccess.Write);
-            binaryFormatter.Serialize(fileStream, users);
-            fileStream.Close();
+            using (FileStream fileStream = new FileStream("data.dat", FileMode.Create, FileAccess.Write))
+            {
+                binaryFormatter.Serialize(fileStream, users);
+            }
         }
 
         private void Deserialize()
@@ -184,16 +184,19 @@ namespace UserControl.FormUI.Presenters
                 }
                 return;
             }
-            fileStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read);
-            users = (List<User>)binaryFormatter.Deserialize(fileStream);
-            fileStream.Close();
+            using (FileStream fileStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read))
+            {
+                users = (List<User>)binaryFormatter.Deserialize(fileStream);
+            }
         }
 
         private bool IsFileCreated()
         {
             try
             {
-                fileStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read);
+                using (FileStream fileStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read))
+                {
+                }
             }
             catch (FileNotFoundException)
             {
