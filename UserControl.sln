@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControl.Models", "UserControl.Models\UserControl.Models.csproj", "{987176B5-25A0-42B1-95D7-15960A2AA33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControl.FormUI", "UserControl.FormUI\UserControl.FormUI.csproj", "{87166F39-B413-46CE-BA74-802FD61EDB86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{987176B5-25A0-42B1-95D7-15960A2AA33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987176B5-25A0-42B1-95D7-15960A2AA33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987176B5-25A0-42B1-95D7-15960A2AA33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987176B5-25A0-42B1-95D7-15960A2AA33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87166F39-B413-46CE-BA74-802FD61EDB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87166F39-B413-46CE-BA74-802FD61EDB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87166F39-B413-46CE-BA74-802FD61EDB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87166F39-B413-46CE-BA74-802FD61EDB86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81D965DA-764D-4370-8752-8EAFE939AEA7}
+	EndGlobalSection
+EndGlobal
