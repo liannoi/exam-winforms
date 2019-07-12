@@ -8,29 +8,49 @@ using UserControl.Models.Models;
 
 namespace UserControl.FormUI.Presenters
 {
+    /// <summary>
+    /// Presenter of the main form.
+    /// </summary>
     public class DashboardPresenter
     {
+        #region Fields
+
+        /// <summary>
+        /// The main form.
+        /// </summary>
         private readonly Dashboard dashboard;
+
+        /// <summary>
+        /// Сollection of users.
+        /// </summary>
         private List<User> users;
+
         private User currentUser;
         private FileStream fileStream;
         private readonly BinaryFormatter binaryFormatter;
 
+        #endregion
+
         public DashboardPresenter(Dashboard dashboard)
         {
             this.dashboard = dashboard;
+
+            // Deserialization to fill controls.
             binaryFormatter = new BinaryFormatter();
             Deserialize();
+
             dashboard.WinLoad += Dashboard_WinLoad;
             dashboard.UsersComboIndexChanged += Dashboard_UsersComboIndexChanged;
             dashboard.AddItemClick += Dashboard_AddItemClick;
             dashboard.SaveItemClick += Dashboard_SaveItemClick;
             dashboard.RemoveItemClick += Dashboard_RemoveItemClick;
             dashboard.SaveButtonClick += Dashboard_SaveButtonClick;
-            dashboard.CheckedListItemCheck += Dashboard_CheckedItem;
+            dashboard.CheckedListItemCheck += Dashboard_CheckedListItemCheck;
         }
 
-        private void Dashboard_CheckedItem(object sender, EventArgs e)
+        #region Event handlers
+
+        private void Dashboard_CheckedListItemCheck(object sender, EventArgs e)
         {
             int selectedIndex = dashboard.GetRolesCheckedListBox().SelectedIndex;
             if (selectedIndex == -1)
@@ -59,7 +79,7 @@ namespace UserControl.FormUI.Presenters
 
         private void Dashboard_AddItemClick(object sender, EventArgs e)
         {
-            User user = new User()
+            User user = new User
             {
                 Id = users.Max(result => result.Id) + 1,
                 DateBirthday = DateTime.Now,
@@ -70,7 +90,8 @@ namespace UserControl.FormUI.Presenters
             dashboard.GetUsersComboBox().SelectedIndex = dashboard.GetUsersComboBox().Items.Count - 1;
         }
 
-        private void Dashboard_UsersComboIndexChanged(object sender, EventArgs e)
+        private void Dashboard_UsersComboIndexChanged(object sender,
+            EventArgs e)
         {
             currentUser = users.Where(result => result.Id == Convert.ToInt32(dashboard.GetUsersComboBox().SelectedValue)).FirstOrDefault();
             if (currentUser == null)
@@ -87,6 +108,10 @@ namespace UserControl.FormUI.Presenters
             dashboard.GetUsersComboBox().SelectedIndex = 0;
             SetupBindingSource();
         }
+
+        #endregion
+
+        #region Auxiliary methods
 
         private void ResetBindings()
         {
@@ -161,5 +186,7 @@ namespace UserControl.FormUI.Presenters
             }
             return true;
         }
+
+        #endregion
     }
 }

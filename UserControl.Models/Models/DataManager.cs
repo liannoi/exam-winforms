@@ -3,8 +3,16 @@ using System.Collections.Generic;
 
 namespace UserControl.Models.Models
 {
+    /// <summary>
+    /// Fills collections with fictional data. Required during application
+    /// debugging stages.
+    /// </summary>
     public class DataManager
     {
+        /// <summary>
+        /// Returns a collection of users.
+        /// </summary>
+        /// <returns>Collection of users</returns>
         public static List<User> GetUsers()
         {
             return new List<User>
@@ -61,6 +69,10 @@ namespace UserControl.Models.Models
             };
         }
 
+        /// <summary>
+        /// Returns a collection of roles.
+        /// </summary>
+        /// <returns>Collection of roles</returns>
         public static List<Role> GetRoles()
         {
             return new List<Role>
