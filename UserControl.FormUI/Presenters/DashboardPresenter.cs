@@ -70,7 +70,9 @@ namespace UserControl.FormUI.Presenters
             {
                 return;
             }
-            _ = dashboard.GetRolesCheckedListBox().GetItemCheckState(selectedIndex) == CheckState.Checked ? currentUser.Roles[selectedIndex].IsChecked = false : currentUser.Roles[selectedIndex].IsChecked = true;
+            bool currentRole;
+            _ = dashboard.GetRolesCheckedListBox().GetItemCheckState(selectedIndex) == CheckState.Checked ? currentRole = false : currentRole = true;
+            currentUser.Roles[selectedIndex].IsChecked = currentRole;
             Serialize();
         }
 
