@@ -2,7 +2,7 @@
 
 [//]: # (Badges)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d44f117267ad40f7b5d400e154094e71)](https://app.codacy.com/app/liannoi/exam-winforms?utm_source=github.com&utm_medium=referral&utm_content=liannoi/exam-winforms&utm_campaign=Badge_Grade_Dashboard) [![CodeFactor](https://www.codefactor.io/repository/github/liannoi/exam-winforms/badge)](https://www.codefactor.io/repository/github/liannoi/exam-winforms) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d44f117267ad40f7b5d400e154094e71)](https://app.codacy.com/app/liannoi/exam-winforms?utm_source=github.com&utm_medium=referral&utm_content=liannoi/exam-winforms&utm_campaign=Badge_Grade_Dashboard) [![CodeFactor](https://www.codefactor.io/repository/github/liannoi/exam-winforms/badge)](https://www.codefactor.io/repository/github/liannoi/exam-winforms) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/liannoi/exam-winforms/blob/master/LICENSE)
 
 [//]: # (Snapshot of the program)
 
