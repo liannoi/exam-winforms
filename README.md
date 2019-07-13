@@ -20,11 +20,12 @@ users to which roles are applied. One user can have multiple roles.
 
 ## System requirements
 
-| Visual Studio | .NET Framework | C# |
-|------------------|----------------|-----|
+| Visual Studio    | .NET Framework         | C#  |
+|------------------|------------------------|-----|
 | 2017 (or higher) | 4.7.1 (is recommended) | 7.3 |
 
 ## Build and Run
+
 Сlone the repository and run the **UserControl.sln** file in Visual Studio.
 
 ## Documentation
@@ -32,4 +33,5 @@ users to which roles are applied. One user can have multiple roles.
 [Wiki](https://github.com/liannoi/exam-winforms/wiki)
 
 ## License
+
 The repository is licensed by [Apache-2.0](https://github.com/liannoi/exam-winforms/blob/master/LICENSE).
