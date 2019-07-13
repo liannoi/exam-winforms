@@ -21,7 +21,7 @@ namespace UserControl.Models.Models
     /// Fills collections with fictional data. Required during application
     /// debugging stages.
     /// </summary>
-    public class DataManager
+    public static class DataManager
     {
         /// <summary>
         /// Returns a collection of users.

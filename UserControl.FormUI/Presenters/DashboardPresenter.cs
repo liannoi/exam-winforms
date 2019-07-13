@@ -70,7 +70,8 @@ namespace UserControl.FormUI.Presenters
             {
                 return;
             }
-            _ = dashboard.GetRolesCheckedListBox().GetItemCheckState(selectedIndex) == CheckState.Checked ? currentUser.Roles[selectedIndex].IsChecked = false : currentUser.Roles[selectedIndex].IsChecked = true;
+            bool currentRole = currentUser.Roles[selectedIndex].IsChecked;
+            _ = dashboard.GetRolesCheckedListBox().GetItemCheckState(selectedIndex) == CheckState.Checked ? currentRole = false : currentRole = true;
             Serialize();
         }
 
@@ -189,12 +190,13 @@ namespace UserControl.FormUI.Presenters
             }
         }
 
-        private bool IsFileCreated()
+        private static bool IsFileCreated()
         {
             try
             {
                 using (FileStream fileStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read))
                 {
+                    // Check for a file. The block must be empty!
                 }
             }
             catch (FileNotFoundException)
