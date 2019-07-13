@@ -1,4 +1,7 @@
 # User Control
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d44f117267ad40f7b5d400e154094e71)](https://app.codacy.com/app/liannoi/exam-winforms?utm_source=github.com&utm_medium=referral&utm_content=liannoi/exam-winforms&utm_campaign=Badge_Grade_Dashboard) [![CodeFactor](https://www.codefactor.io/repository/github/liannoi/exam-winforms/badge)](https://www.codefactor.io/repository/github/liannoi/exam-winforms)
+
 ![](https://github.com/liannoi/exam-winforms/blob/master/snapshot.png)
 
 Examination project performed by me at the STEP Computer Academy.
